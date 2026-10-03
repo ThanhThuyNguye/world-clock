@@ -22,6 +22,17 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]",
     );
   }
+  //Hanoi
+  let saigonElement = document.querySelector("#saigon");
+  if (saigonElement) {
+    let saigonDateElement = saigonElement.querySelector(".date");
+    let saigonTimeElement = saigonElement.querySelector(".time");
+    let saigonTime = moment().tz("Asia/Saigon");
+    saigonDateElement.innerHTML = saigonTime.format("MMMM Do YYYY");
+    saigonTimeElement.innerHTML = saigonTime.format(
+      "h:mm:ss [<small>]A[</small>]",
+    );
+  }
 }
 
 function updateCity(event) {
